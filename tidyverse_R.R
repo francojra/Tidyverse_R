@@ -74,3 +74,17 @@ dados
 
 head(data.frame(iris))
 as_tibble(iris)
+
+# Forcats ----------------------------------------------------------------------------------------------------------------------------------
+
+### As principais funções do forcats servem para alterar a ordem e modificar os níveis de um fator.
+
+fator <- factor(c("a","a","a","b","b", "c", "d", "e"))
+fator
+
+fct_collapse(fator, b2 = c("b", "c"), a2 = c("a", "d"))
+
+fct_recode(fator, b2 = "b", b2 = "c", a2 = "a", a2 = "d")
+
+fct_lump(fator, 2, other_level = "Outros") # Transforma os níveis menos frequentes de um fator em 
+# um nível “Outros”.
