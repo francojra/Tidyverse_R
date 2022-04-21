@@ -20,3 +20,48 @@
 
 if (!require(tidyverse)) {install.packages("tidyverse");require(tidyverse)}
 tidyverse_packages()
+
+# Readr ------------------------------------------------------------------------------------------------------------------------------------
+
+### O readr foi desenvolvido para ser um jeito rápido e fácil de importar dados retangulares 
+### (dados estruturados, csv, tsv e fwf) das mais diferentes fontes.
+
+### Para exemplificar vamos rodar os dados filmes da base IMDB.
+
+dados <- read_rds("imdb.rds")
+dados
+
+# Leitura ----------------------------------------------------------------------------------------------------------------------------------
+
+### O readr lê seis formatos de arquivo com essas sete funções abaixo:
+
+# - read_csv() – Arquivos separados por vírgula
+# - read_tsv() – Arquivos separados por tabulação
+# - read_delim() – Arquivos delimitados gerais
+# - read_fwf() – Arquivos de largura fixa
+# - read_table() – Arquivos tabulares em que as colunas são separadas por espaço em branco.
+# - read_log() – Arquivos de log da web
+
+# Exportação -------------------------------------------------------------------------------------------------------------------------------
+
+### E exporta nos seguintes formatos:
+
+# - write_csv()
+# - write_csv2()
+# - write_delim()
+# - write_excel_csv() – Salva de csv para Excel
+# - write_excel_csv2()
+# - write_tsv()
+
+# Outros arquivos --------------------------------------------------------------------------------------------------------------------------
+
+# - haven Lê arquivos SPSS, Stata , and SAS files.
+# - readxl Lê arquivos excel xls e.xlsx).
+# - DBI , em conjunto junto com um back-end específico do banco de dados (por exemplo, 
+# RMySQL , RSQLite , RPostgreSQL etc.) permite executar consultas SQL em um banco
+# de dados e retornar uma tabela de dados.
+# - Googledrive importa arquivos do Google Drive
+# - jsonlite Lê arquivos json
+# - xml2 Lê arquivos XML
+# - httr Lê arquivos Web APIs
+# - rvest Lê arquivos HTML
