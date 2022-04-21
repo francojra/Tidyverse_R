@@ -88,3 +88,18 @@ fct_recode(fator, b2 = "b", b2 = "c", a2 = "a", a2 = "d")
 
 fct_lump(fator, 2, other_level = "Outros") # Transforma os níveis menos frequentes de um fator em 
 # um nível “Outros”.
+
+# Broom ------------------------------------------------------------------------------------------------------------------------------------
+
+### Broom sumariza informações-chave sobre os modelos em tibbles usando três funções: tidy, glance 
+### e augment.
+
+if (!require(broom)) {install.packages("broom");require(broom)}
+
+fit <- lm(Sepal.Width ~ Petal.Length + Petal.Width, iris)
+
+tidy(fit)
+
+### tidy produz um tibble onde cada linha contém informações sobre um componente importante do 
+### modelo. Para modelos de regressão, isso geralmente corresponde a coeficientes de regressão. 
+### Isso pode ser útil se você deseja inspecionar um modelo ou criar visualizações personalizadas.
