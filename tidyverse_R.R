@@ -65,3 +65,12 @@ dados
 # - xml2 Lê arquivos XML
 # - httr Lê arquivos Web APIs
 # - rvest Lê arquivos HTML
+
+# Tibble -----------------------------------------------------------------------------------------------------------------------------------
+
+### Tibbles são data frames que forçam você a lidar com os problemas no início do projeto e 
+### desenvolver um código mais limpo e expressivo. Ele não altera o nome ou tipo das variáveis e 
+### aponta erros quando a variável não existe. Aqui rodamos um exemplo usando a base de dados Iris.
+
+head(data.frame(iris))
+as_tibble(iris)
