@@ -6,7 +6,7 @@
 
 ### Etapas do script:
 
-1.Introdução;
+1. Introdução;
 2. Pacotes;
 3. Readr;
 4. Leitura;
