@@ -117,3 +117,16 @@ write.table(aug, file = "aug.tsv", row.names = FALSE, sep = "\t") # Salvar tabel
 ### augment adiciona colunas a um conjunto de dados, contendo informações como valores ajustados, 
 ### resíduos ou atribuições de cluster. Todas as colunas adicionadas a um conjunto de dados têm 
 ### “.prefixo” para impedir que as colunas existentes sejam substituídas.
+
+# Purrr ------------------------------------------------------------------------------------------------------------------------------------
+
+### Purr contribui para a programação funcional com um consistente conjunto de ferramentas que 
+### facilitam o trabalho com vetores e funções.
+
+name <- c("Jon Snow", "Asha Greyjoy", "Daenerys Targaryen", "Eddard Stark", "Brienne of Tarth","Melisandre",
+         "Kevan Lannister", "Davos Seaworth", "Victarion Greyjoy","Sansa Stark")
+
+# Usando imap_chr o nome (.x) e o índice do nome (.y)
+
+imap_chr(name, ~ paste0(.y, ": ", .x))
+imap_chr(name, ~ paste0("Got : ", .x))
