@@ -103,3 +103,17 @@ tidy(fit)
 ### tidy produz um tibble onde cada linha contém informações sobre um componente importante do 
 ### modelo. Para modelos de regressão, isso geralmente corresponde a coeficientes de regressão. 
 ### Isso pode ser útil se você deseja inspecionar um modelo ou criar visualizações personalizadas.
+
+glance(fit)
+
+### glance devolve um tibble com exatamente uma linha de qualidade de medidas de condicionamento 
+### físico e estatísticas relacionadas. Isso é útil para verificar a especificação incorreta do 
+### modelo e comparar muitos modelos.
+
+aug <- augment(fit, data = iris)
+view(aug)
+write.table(aug, file = "aug.tsv", row.names = FALSE, sep = "\t") # Salvar tabela no diretório
+
+### augment adiciona colunas a um conjunto de dados, contendo informações como valores ajustados, 
+### resíduos ou atribuições de cluster. Todas as colunas adicionadas a um conjunto de dados têm 
+### “.prefixo” para impedir que as colunas existentes sejam substituídas.
