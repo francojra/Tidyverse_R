@@ -123,10 +123,28 @@ write.table(aug, file = "aug.tsv", row.names = FALSE, sep = "\t") # Salvar tabel
 ### Purr contribui para a programação funcional com um consistente conjunto de ferramentas que 
 ### facilitam o trabalho com vetores e funções.
 
-name <- c("Jon Snow", "Asha Greyjoy", "Daenerys Targaryen", "Eddard Stark", "Brienne of Tarth","Melisandre",
-         "Kevan Lannister", "Davos Seaworth", "Victarion Greyjoy","Sansa Stark")
+name <- c("Jon Snow", "Asha Greyjoy", "Daenerys Targaryen", "Eddard Stark", "Brienne of Tarth",
+          "Melisandre", "Kevan Lannister", "Davos Seaworth", "Victarion Greyjoy","Sansa Stark")
 
-# Usando imap_chr o nome (.x) e o índice do nome (.y)
+### Usando imap_chr o nome (.x) e o índice do nome (.y)
 
 imap_chr(name, ~ paste0(.y, ": ", .x))
 imap_chr(name, ~ paste0("Got : ", .x))
+map(name,  ~ paste0(.x))
+
+### Outras funções do purrr:
+
+# - map(.x, .f, …)
+# - map_if(.x, .p, .f, …)
+# - map_at(.x, .at, .f, …)
+# - map_lgl(.x, .f, …)
+# - map_chr(.x, .f, …)
+# - map_int(.x, .f, …)
+# - map_dbl(.x, .f, …)
+# - map_dfr(.x, .f, …, .id = NULL)
+# - map_dfc(.x, .f, …)
+# - walk(.x, .f, …)
+
+### Existem ainda muitos outros pacotes dentro do tidyverse, como o ggplot2 para visualização e 
+### criação de gráficos, o dplyr para a manipulação de dados e o tidyr para organizar a base 
+### de dados de forma coesa. 
