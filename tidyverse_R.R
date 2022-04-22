@@ -42,7 +42,7 @@ dados
 # - read_table() – Arquivos tabulares em que as colunas são separadas por espaço em branco.
 # - read_log() – Arquivos de log da web
 
-# Exportação -------------------------------------------------------------------------------------------------------------------------------
+# Exportação de tabelas -------------------------------------------------------------------------------------------------------------------------------
 
 ### E exporta nos seguintes formatos:
 
@@ -53,7 +53,7 @@ dados
 # - write_excel_csv2()
 # - write_tsv()
 
-# Outros arquivos --------------------------------------------------------------------------------------------------------------------------
+# Outros arquivos de elitura --------------------------------------------------------------------------------------------------------------------------
 
 # - haven Lê arquivos SPSS, Stata , and SAS files.
 # - readxl Lê arquivos excel xls e.xlsx).
